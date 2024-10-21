@@ -23,7 +23,7 @@ def user_interaction():
         data = HHvacancy.fill_list_with_vacancies(response)
         if input('Сортировать по зарплате? (да/нет): ') == 'да':
             top_N = int(input('Количество вакансий: '))
-            data = json_saver.get_data_from_file_by_salary(data, top_N)
+            data = json_saver.get_data_by_salary(data, top_N)
             json_saver.add_data_to_json_file(data, 'HH_vacancies.json')
         else:
             json_saver.add_data_to_json_file(data, 'HH_vacancies.json')
@@ -34,7 +34,7 @@ def user_interaction():
         data = SJvacancy.fill_list_with_vacancies(response)
         if input('Сортировать по зарплате? (да/нет): ') == 'да':
             top_N = int(input('Количество вакансий: '))
-            data = json_saver.get_data_from_file_by_salary(data, top_N)
+            data = json_saver.get_data_by_salary(data, top_N)
             json_saver.add_data_to_json_file(data, 'HH_vacancies.json')
         else:
             json_saver.add_data_to_json_file(data, 'SJ_vacancies.json')

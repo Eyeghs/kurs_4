@@ -13,7 +13,7 @@ class AbstractClass_work_with_file(ABC):
         pass
 
     @abstractmethod
-    def get_data_from_file_by_salary(self):
+    def get_data_by_salary(self):
         pass
 
     @abstractmethod
@@ -42,7 +42,7 @@ class Data_file(AbstractClass_work_with_file):
             with open(f'{filename}', 'w', encoding='utf-8') as f:
                 json.dump(json_data, f)
 
-    def get_data_from_file_by_salary(self, data, top_N):
+    def get_data_by_salary(self, data, top_N):
         """
         Функция сортировки данных по зарплате.
         """
